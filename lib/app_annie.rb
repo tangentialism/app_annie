@@ -43,5 +43,5 @@ module AppAnnie
   class RateLimitExceeded < Exception; end
   class ServerError < Exception; end
   class ServerUnavailable < Exception; end
-
+  class BadResponse < Exception; end
 end
