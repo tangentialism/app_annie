@@ -39,5 +39,10 @@ module AppAnnie
       end
     end
 
+    def ranks(options)
+      response = AppAnnie.api_request("/v1.1/#{options[:vertical]||'apps'}/#{options[:market]||'ios'}/app/#{@id}/ranks", options)
+      return response['app_ranks']
+    end 
+
   end
 end
