@@ -39,7 +39,7 @@ module AppAnnie
     end
   end
 
-  def self.api_request(url)
+  def self.api_request(url, options={})
     response = connection.get do |req|
         req.headers['Authorization'] = "Bearer #{AppAnnie.api_key}"
         req.headers['Accept'] = 'application/json'
